@@ -1,0 +1,78 @@
+﻿<!-- Single line Expression -->
+
+<h1>@DateTime.Now.ToShortTimeString()</h1>
+
+<!-- Multi line Expression -->
+
+@{ 
+    var date = DateTime.Now.ToShortTimeString();
+    var record = "Fahad Hussain";
+
+}
+<h1> @date </h1>
+<h1> @record </h1>
+
+<!-- if and else condition ... -->
+
+@{ 
+    string name = "";
+    if (1 > 0)
+    {
+        name = "Fahad Hussain";
+    }
+
+
+}
+
+<h3> @name </h3>
+<!-- Loos for, foreach, While, do while & switch case ... -->
+ 
+
+@for (int i = 0; i < 10; i++)
+{
+ <h2> welcome to Razor </h2> <br/>
+}
+@{ 
+
+    string[] namee = { "ali", "junaid" };
+}
+<ol> @foreach (var n in namee)
+{
+<li>@n </li>
+}
+    </ol>
+
+@{
+    var ii = 0;
+}
+@while (ii < 12)
+{
+<h4>@ii</h4>
+    ii++;
+}
+
+@{
+    var iii = 0;
+ }
+
+@do
+{
+    <h4>@iii</h4>
+    iii++;
+
+} while (iii < 12);
+
+@try
+{
+    throw new InvalidOperationException("You did wrong thing here!");
+}
+
+catch (Exception ex)
+{
+    <h1> Error is: @ex </h1>
+
+}
+finally
+{
+<p> Finally for try and catch! </P>
+}

@@ -1,0 +1,27 @@
+﻿@model Auth_MVC.Models.Signup
+
+@{
+    ViewBag.Title = "UserDashboard";
+}
+
+<h2>Welcome to Dashboard</h2>
+@*@if(Request.Cookies["UserEmail"] !=null)
+{
+ <h1>welcome @Request.Cookies["UserEmail"].Value.ToString()</h1>
+
+}*@
+
+@if (Session["UserEmail"] != null)
+{
+     <h1>welcome @Session["UserEmail"].ToString()</h1>
+
+     <h1>@Html.ActionLink("Logout","Logout","user")</h1>
+}
+else
+{
+    Response.Redirect("~/user/Login");
+}
+
+
+
+

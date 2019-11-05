@@ -1,0 +1,2 @@
+git remote add origin https://github.com/ehTi360/my-website.git
+git push -u origin master
